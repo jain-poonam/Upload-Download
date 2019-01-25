@@ -3,10 +3,10 @@ from flask import Flask,flash,render_template,jsonify,request,redirect, send_fro
 from werkzeug.utils import secure_filename
 from fileinput import filename
 
-
-app = Flask(__name__)
 Upload_Path ="/Users/pyjain/Documents/Assignment4"
 EXTENSIONS = set(['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif'])
+
+app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = Upload_Path
 app.config["MAX_CONTENT_LENGTH"] = 20*1024*1024
 
